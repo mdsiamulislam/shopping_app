@@ -1,29 +1,29 @@
 import 'package:flutter/material.dart';
-import 'package:shopping_app/pages/cart_page.dart';
-import 'package:shopping_app/pages/home_page.dart';
-import 'package:shopping_app/pages/product_pages.dart';
+import 'package:get/get.dart';
+import 'core/utils/initial_bindings.dart';
+import 'routes/app_routes.dart';
 
-void main() {
+import 'core/constants/app_theme.dart';
+import 'core/constants/app_colors.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await initServices();
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        fontFamily: 'Lato',
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color.fromRGBO(254, 206, 1, 1),
-          primary: const Color.fromRGBO(254, 206, 1, 1),
-        ),
-        useMaterial3: true,
-      ),
-      home: HomePage(),
+    return GetMaterialApp(
+      title: 'Premium Shopping App',
+      debugShowCheckedModeBanner: false,
+      theme: AppTheme.light,
+      initialBinding: InitialBindings(),
+      initialRoute: AppRoutes.initial,
+      getPages: AppRoutes.routes,
     );
   }
 }
