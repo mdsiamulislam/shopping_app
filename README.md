@@ -2,18 +2,6 @@
 
 A modern, high-performance Flutter e-commerce application built with **GetX**, featuring a premium UI/UX, Dark Mode support, and robust state management.
 
-## 📱 Screenshots
-
-| Home (Light) | Home (Dark) | Details |
-|--------------|-------------|---------|
-| [Screenshot Placeholder] | [Screenshot Placeholder] | [Screenshot Placeholder] |
-
-| Favorites | Search | Error State |
-|-----------|--------|-------------|
-| [Screenshot Placeholder] | [Screenshot Placeholder] | [Screenshot Placeholder] |
-
----
-
 ## ✨ Features
 
 - **Product Listing:** A clean, grid-based view of products with modern cards.
